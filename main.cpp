@@ -126,7 +126,13 @@ void instrucoes()
 
 int main(int argc, char *argv[])
 {
-	if(strcmp(argv[1], "triangulo") == 0 && argc == 3)
+	if(argc < 2)
+	{
+		cout << "ERRO na passagem de parametros!!!" << endl << endl;
+		instrucoes();
+	}
+	
+	else if(strcmp(argv[1], "triangulo") == 0 && argc == 3)
 	{
 		float lado;
 		lado = atof(argv[2]);
