@@ -2,113 +2,11 @@
 #include <cstdlib>
 #include <cstring>
 #include <cmath>
+#include "areas.h"
+#include "perimetros.h"
+#include "volumes.h"
 
 using namespace std;
-
-#define PI 3.1415
-
-float area_triang(float l)
-{
-	float area;
-
-	area = (sqrt(3) * (l*l))/4;
-
-	return area;
-}
-
-float perimetro_triang(float l)
-{
-	return 3*l;
-}
-
-float area_retang(float base, float altura)
-{
-	return base*altura;
-}
-
-float perimetro_retang(float base, float altura)
-{
-	return 2*(base+altura);
-}
-
-float area_quad(float l)
-{
-	return l*l;
-}
-
-float perimetro_quad(float l)
-{
-	return 4*l;
-}
-
-float area_circ(float raio)
-{
-	return PI*raio*raio;
-}
-
-float perimetro_circ(float raio)
-{
-	return PI*2*raio;
-}
-
-float area_piramide(float l_base, float lateral)
-{
-	float area_base, area_triang, altura;
-
-	area_base = l_base*l_base;
-	
-	altura = pow(lateral, 2) - pow((l_base/2), 2);
-	altura = sqrt(altura);
-
-	area_triang = (l_base*altura)/2;
-
-	return area_base+(4*area_triang);
-}
-
-float volume_piramide(float l_base, float lateral)
-{
-	float area_base, altura;
-
-	area_base = l_base*l_base;
-	
-	altura = pow(lateral, 2) - pow((l_base/2), 2);
-	altura = sqrt(altura);
-	
-	return (area_base*altura)/3;
-}
-
-float area_cubo(float lado)
-{
-	return 6*(lado*lado);
-}
-
-float volume_cubo(float lado)
-{
-	return lado*lado*lado;
-}
-
-float area_paralele(float l1, float l2, float l3)
-{
-	float area;
-	area = (2*l1*l2) + (2*l1*l3) + (2*l2*l3);
-
-	return area;
-}
-
-float volume_paralele(float l1, float l2, float l3)
-{
-	return l1*l2*l3;
-}
-
-float area_esfera(float raio)
-{
-	return 4*PI*(raio*raio);
-}
-
-float volume_esfera(float raio)
-{
-	return (4*PI*raio*raio*raio)/3;
-}
 
 void instrucoes()
 {
