@@ -24,7 +24,13 @@ void instrucoes()
 
 int main(int argc, char *argv[])
 {
-	if(argc < 2)
+	if(argc == 1)
+	{
+		cout << "Nenhum parâmetro foi identificado, para efetuar o cálculo execute da seguinte forma:" << endl << endl;
+                instrucoes();
+	}
+	
+	else if(argc < 2)
 	{
 		cout << "ERRO na passagem de parametros!!!" << endl << endl;
 		instrucoes();
