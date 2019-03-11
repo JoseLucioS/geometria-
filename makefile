@@ -21,4 +21,5 @@ perimetros.o :
 volumes.o :
 	$(CC) $(CPPFLAGS) -c volumes.cpp
 
-
+clean :
+	rm -f core $(PROG) $(OBJS) 
